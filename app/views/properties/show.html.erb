@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>
+    <%= @property.address %>
+  </h2>
+  <p id="notice"><%= notice %></p>
+
+<p>     
+  <table>
+    <thead>
+      <tr>
+        <th>Start Time</th>
+        <th>Principal</th>
+        <th>Interest Rate</th>
+        <th>Property</th>
+        <th colspan="3">Links</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @property.loans.each do |loan| %>
+        <tr>
+          <td><%= loan.startTime %></td>
+          <td><%= loan.principal %></td>
+          <td><%= loan.interest %></td>
+          <td><%= loan.property.address %></td>
+          <td><%= link_to 'Show', loan %></td>
+          <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
+          <td><%= link_to 'Remove', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</p>
+<hr>
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>
+</div>

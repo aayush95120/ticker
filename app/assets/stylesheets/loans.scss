@@ -1,0 +1,27 @@
+// Place all the styles related to the Loans controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+      /*border-spacing: 5px;*/
+      width: 100%;
+  }
+
+th {
+      color:#e74c3c;
+      background-color: white;
+}
+
+tr:nth-child(even) {
+    background-color:#f2f2f2; 
+}
+
+tr:hover {
+    background-color: #b3ff66;
+  }
+
+th, td {
+      padding: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+}

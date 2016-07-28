@@ -1,0 +1,59 @@
+
+<!-- Orange jumbotron page header where main ticker is displayed -->
+<div class="jumbotron" id="header">
+  <div class="container text-center">
+    <h1 id="ticker">Loading...</h1>
+  </div>
+</div>
+<div class="text-center">
+  <p id="notice"><%= notice %></p>
+</div>
+<!-- <div class="text-center">
+  <h4 id="loan-test">unchanged</h4>
+</div> -->
+
+<!-- Grid of all the properties -->
+<div class="slideanim">
+  <section id="properties-section">
+    <% @properties.each do |property| %>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="panel panel-default text-center">
+          
+          <div class="panel-heading panel-height">
+            <h3><%= property.address %></h3>
+          </div>
+          
+          <div class="panel-body">
+            <p><%= link_to 'Loans', property %></p>
+            <p><%= link_to 'Edit', edit_property_path(property) %></p>
+            <p><%= link_to 'Remove', property, method: :delete, data: { confirm: 'Are you sure you want to remove ' + property.address + '?' } %></p>
+            <!-- <h3 id=AI1Total>Loading</h3> -->
+          </div>
+        </div>      
+      </div>
+    <% end %>
+  </section>
+</div>
+
+<!-- New Property/Loan -->
+<div id="new-block">
+  <hr></hr>
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+    <div class="text-center">    
+      <p><%= link_to "New", "#", id: "new-link" %></p>
+    </div>
+  </div>
+    <section id="new-section">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="text-center">    
+            <p><%= link_to 'New Property', new_property_path %></p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <div class="text-center">    
+          <p><%= link_to 'New Loan', new_loan_path %></p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

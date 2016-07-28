@@ -1,0 +1,85 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "loans";
+@import "properties";
+
+h1#ticker {
+  font-size: 7.5em;
+}
+
+h2 {
+  color:gray;
+  letter-spacing: 1px;
+}
+body {
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      /*color: #777777;*/
+      // font-size: 100%;
+      /*line-height: 24px;*/
+    }
+    /* Remove the jumbotron's default bottom margin */ 
+
+div.notice {
+  padding-top: 5px;
+}
+
+#new-block {
+  align-content: center;
+}
+
+.jumbotron {
+  color: white;
+  background-color: #e74c3c;
+}
+
+.field[type=text] {
+    border: none;
+    border-bottom: 2px solid #e74c3c;
+}
+
+.navbar {
+  margin-bottom: 0;
+  background-color: #e74c3c;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-family: Montserrat, sans-serif;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+.navbar-brand {
+  padding-top: 7px;
+}
+.navbar-toggle {
+  color: #f4511e;
+}
+
+.top-bar .logo {
+  max-width: 80px;
+  position: relative;
+  bottom: 7px;
+}
+.logo.logo-wide {
+  max-width: 140px;
+  bottom: 12px;
+  margin-bottom: -6px;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  startTime: 2016-07-25 05:15:59
+  principal: 1
+  interest: 1
+  property_id: 
+
+two:
+  startTime: 2016-07-25 05:15:59
+  principal: 1
+  interest: 1
+  property_id: 

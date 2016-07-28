@@ -1,0 +1,34 @@
+<%= form_for(@loan) do |f| %>
+  <% if @loan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@loan.errors.count, "error") %> prohibited this loan from being saved:</h2>
+
+      <ul>
+      <% @loan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :startTime %><br>
+    <%= f.datetime_select :startTime %>
+  </div>
+  <div class="field">
+    <%= f.label :principal %><br>
+    <%= f.number_field :principal %>
+  </div>
+  <div class="field">
+    <%= f.label :interest %><br>
+    <%= f.number_field :interest %>
+  </div>
+  <div class="field">
+    <%= f.label :property_id %><br>
+    <%= f.select :property_id, Property.all.collect { |p| [p.address, p.id]} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+<% end %>
