@@ -1,28 +1,14 @@
-== README
+== Burnt Money Ticker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+First Rails App! 
 
-Things you may want to cover:
+Concepts Used:
+* Ruby on Rails
+* HTML/CSS
+* JavaScript
+* JQuery
+* AJAX
+* SQLite
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Ruby Version: 2.3.1
+Rails Version: 4.2.6
