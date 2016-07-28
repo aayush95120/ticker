@@ -1,3 +1,10 @@
+
+$(function() {
+    // initializeClock2("loan-test",starttime);
+  // $('.dial').knob({
+  // });
+});
+
 // function getTimeRemaining2(starttime) {
 //   var t = Date.parse(new Date()) - Date.parse(starttime);
 //   var seconds = Math.floor(t / 1000);
@@ -18,6 +25,3 @@
 // var starttime = new Date(Date.parse('2016-5-8'));
 
 // // $(document).ready(initializeClock2('ticker', starttime));
-// $(function() {
-//     initializeClock2("loan-test",starttime);
-// });

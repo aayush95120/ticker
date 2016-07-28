@@ -1,6 +1,6 @@
-$(function() {
-  
-    initializeClock();
+$(function() {  
+  initializeClock();
+  $('.dial').knob();
   // $( "#ticker" ).fadeIn({duration:1000, queue:false});
   // $( "div#header" ).slideDown({duration:600, queue:false}, function() {
   //   // Animation complete.
@@ -27,8 +27,14 @@ function initializeClock() {
         sumTotal = sumTotal + (netPerSec*dt); //how much interest accumulated/sec
         
       });
-      sumTotal = sumTotal.toFixed(2);
-      $("#ticker").html("$" + sumTotal);
+      var bigVal = (100*sumTotal)%100000;
+      var mediumVal = (100*sumTotal)%10000; 
+      var smallVal = (100*sumTotal)%1000;
+      var tickerVal = sumTotal.toFixed(2);
+      $(".bigDial").val(bigVal).trigger("change");
+      $(".mediumDial").val(mediumVal).trigger("change");
+      $(".smallDial").val(smallVal).trigger("change");
+      $("#ticker").html("$" + tickerVal);
 
     }, "json");
 

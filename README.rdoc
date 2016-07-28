@@ -2,13 +2,21 @@
 
 First Rails App! 
 
+
 Concepts Used:
+
 * Ruby on Rails
+
 * HTML/CSS
+
 * JavaScript
+
 * JQuery
+
 * AJAX
+
 * SQLite
 
 Ruby Version: 2.3.1
+
 Rails Version: 4.2.6
