@@ -6,6 +6,16 @@
   // color: (0,250,0);
   // overflow-y: scroll;
 }
+
+.btn-primary {
+    background: #b3b3b3;
+    border: 0 none;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #e74c3c;
+}
+
 // div#header {
 //   display: none;
 // }
@@ -14,9 +24,6 @@
 //   display: none;
 // }
 
-#new-section {
-  display: none;
-}
 
 ul#menu li {
     display:inline;
