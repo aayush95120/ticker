@@ -39,22 +39,20 @@
             <h3><%= property.address %></h3>
           </div>
           <div class="panel-body">
+
             <h4>Net Principal Borrowed:</h4>
-            <h5><strong>$<%= property.loans.sum(:principal) %></strong></h5>
+            <h5><strong>$<%= 
+              format("%.2f", property.loans.sum(:principal)) 
+              %></strong></h5>
+
             <h4>Annual Net Interest:</h4>
-            <h5><strong>$<%= property.loans.inject(0) { |sum, l| sum + ((l.principal * l.interest) / 100.00) } %></strong></h5>
-<!-- 
-            <h4>Net Principal: $<%# property.loans.select { |l| l!= nil }.inject { |l, sum| sum += l.principal * l.interest } %></h4>
+            <h5><strong>$<%=
+              format("%.2f", property.loans.inject(0) { |sum, l| sum + ((l.principal * l.interest) / 100.00) }) 
+              %></strong></h5>
 
-            <h4>Net Principal: $<%# property.loans.sum{ |l| l.principal * l.interest } %></h4>
-            Why doesnt this^ work, see http://apidock.com/rails/Enumerable/sum
-            Jorge suggested loans.inject(0) { |l, sum| sum += l.principal * l.interest }
-
- -->            
             <p><%= link_to 'Loan Details', property %></p>
             <p><%= link_to 'Edit', edit_property_path(property) %></p>
             <p><%= link_to 'Remove', property, method: :delete, data: { confirm: 'Are you sure you want to remove "' + property.address + '"?' } %></p>
-            <!-- <h3 id=AI1Total>Loading</h3> -->
           </div>
         </div>      
       </div>
@@ -65,13 +63,14 @@
 <!-- New Property/Loan -->
 <div id="new-block">
   <hr></hr>
-    <section id="new-section">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="text-center">    
-          <a href="/properties/new" class="btn btn-primary" role="button" aria-pressed="true">New Property</a>
-          <a href="/loans/new" class="btn btn-primary" role="button" aria-pressed="true">New Loan</a>
-        </div>
+  <section id="new-section">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="text-center">    
+        <a href="/properties/new" class="btn btn-primary" role="button" aria-pressed="true">New Property</a>
+        <a href="/loans/new" class="btn btn-primary" role="button" aria-pressed="true">New Loan</a>
       </div>
-    </section>
-  </div>
+      <br>
+    </div>
+  </section>
 </div>
+
