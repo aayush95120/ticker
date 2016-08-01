@@ -30,7 +30,7 @@ function initializeClock() {
       var bigVal = (100*sumTotal)%100000;
       var mediumVal = (100*sumTotal)%10000; 
       var smallVal = (100*sumTotal)%1000;
-      var tickerVal = sumTotal.toFixed(2);
+      var tickerVal = sumTotal.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
       $(".bigDial").val(bigVal).trigger("change");
       $(".mediumDial").val(mediumVal).trigger("change");
       $(".smallDial").val(smallVal).trigger("change");

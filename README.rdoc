@@ -9,13 +9,13 @@ Concepts Used:
 
 * HTML/CSS
 
-* JavaScript
+* JavaScript and JSON
 
 * JQuery
 
 * AJAX
 
-* SQLite
+* SQL Databases (SQLite)
 
 Ruby Version: 2.3.1
 

@@ -1,38 +1,38 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-<h2>Loans Across All Properties</h2>
+  <h2>Loans Across All Properties</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Start Time</th>
-      <th>Principal</th>
-      <th>Interest Rate</th>
-      <th>Property</th>
-      <th colspan="3">Links</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @loans.each do |loan| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= loan.startTime %></td>
-        <td><%= loan.principal %></td>
-        <td><%= loan.interest %></td>
+        <th>Start Time</th>
+        <th>Principal</th>
+        <th>Interest Rate</th>
+        <th>Property</th>
+        <th colspan="3">Links</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @loans.each do |loan| %>
+      <tr>
+        <td><%= loan.startTime.strftime("%b %d, %Y") %></td>
+        <td><%= number_to_currency(loan.principal) %></td>
+        <td><%= loan.interest %>%</td>
         <td><%= loan.property.address %></td>
         <td><%= link_to 'Details', loan %></td>
         <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
         <td><%= link_to 'Remove', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
 
-<hr></hr>
+  <hr></hr>
 
-<%= link_to 'New Loan', new_loan_path %>
-<br></br>
-<%= link_to 'All Properties', properties_path %>
+  <%= link_to 'New Loan', new_loan_path %>
+  <br></br>
+  <%= link_to 'All Properties', properties_path %>
 </div>
 

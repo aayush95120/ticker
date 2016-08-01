@@ -41,13 +41,13 @@
           <div class="panel-body">
 
             <h4>Net Principal Borrowed:</h4>
-            <h5><strong>$<%= 
-              format("%.2f", property.loans.sum(:principal)) 
+            <h5><strong><%= 
+              number_to_currency(property.loans.sum(:principal)) 
               %></strong></h5>
 
             <h4>Annual Net Interest:</h4>
-            <h5><strong>$<%=
-              format("%.2f", property.loans.inject(0) { |sum, l| sum + ((l.principal * l.interest) / 100.00) }) 
+            <h5><strong><%=
+              number_to_currency(property.loans.inject(0) { |sum, l| sum + ((l.principal * l.interest) / 100.00) }) 
               %></strong></h5>
 
             <p><%= link_to 'Loan Details', property %></p>
